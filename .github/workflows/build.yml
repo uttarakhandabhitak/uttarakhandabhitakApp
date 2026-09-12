@@ -18,7 +18,7 @@ jobs:
   run: |
     mkdir -p build-project
    unzip -q UttarakhandAbhitakApp.zip -d build-project  
-   unzip -q UttarakhandAbhitakApp.zip -d build-project
+   
     find build-project -maxdepth 2 -type f | head -50
       
      - name: Find project directory
