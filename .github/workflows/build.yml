@@ -13,14 +13,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Extract app project
-        run: |
-          mkdir -p build-project
-          unzip -q UttarakhandAbhitakApp-BuildReady.zip -d build-project
-          find build-project -maxdepth 2 -type f | head -50
-
-      - name: Find project directory
+- name: Extract app project
+  run: |
+    mkdir -p build-project
+    unzip -q UttarakhandAbhitakApp.zip -d build-project
+    find build-project -maxdepth 2 -type f | head -50
+      
+     - name: Find project directory
         run: |
           echo "Project files:"
           find build-project -maxdepth 3 -type f | head -100
